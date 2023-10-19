@@ -26,6 +26,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <a href='#main' className='jumplink'>Jump to content</a>
       <LanguageContext.Provider value={{ language, setLanguage }}>
         <DestinationContext.Provider value={{ destinations, setDestinations }}>
           <Header />
@@ -33,7 +34,7 @@ const App = () => {
             <div className='container'>
               <Routes>
                 <Route path='/' element={
-                  <div style={{'text-align':'center'}}>
+                  <div style={{textAlign:'center'}}>
                     <h1>{ l10n('Welcome!', language) }</h1>
                     <p>Please select your language:</p>
                     <div className='lang-select'>
